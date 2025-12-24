@@ -1,0 +1,28 @@
+{
+  "name": "mean-static-content-display",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "express",
+    "mean",
+    "static",
+    "content",
+    "display",
+    "backend"
+  ],
+  "author": "Mohamed Abdelkader",
+  "license": "MIT",
+  "description": "Express.js backend for MEAN static content display",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
