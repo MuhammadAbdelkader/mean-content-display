@@ -24,6 +24,7 @@ npm install
 # Start locally
 npm start
 # Server runs on http://localhost:3000
+```
 
 ---
 
@@ -36,6 +37,7 @@ npm start
   "status": "Running",
   "version": "1.0.0"
 }
+```
 
 ## Static Content
 
@@ -46,6 +48,7 @@ npm start
   "textSections": [...],
   "images": [...]
 }
+```
 
 ---
 
@@ -75,6 +78,7 @@ backend/
 ├── package.json      # Dependencies
 ├── vercel.json       # Vercel configuration
 └── README.md
+```
 
 ---
 
