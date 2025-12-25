@@ -1,0 +1,298 @@
+# ================================
+# MEAN Stack Project .gitignore
+# ================================
+
+# ================================
+# Node.js & NPM
+# ================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# ================================
+# Environment Variables
+# ================================
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# ================================
+# Build Directories
+# ================================
+dist/
+dist-ssr/
+build/
+out/
+.output/
+.vercel/
+.firebase/
+
+# ================================
+# Angular Specific
+# ================================
+# Compiled output
+/frontend/dist/
+/frontend/tmp/
+/frontend/out-tsc/
+/frontend/.angular/
+
+# Angular cache
+.angular/cache/
+
+# ================================
+# IDE & Editor Files
+# ================================
+# VS Code
+.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains IDEs
+.idea/
+*.iml
+*.ipr
+*.iws
+.idea_modules/
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+
+# ================================
+# Operating System Files
+# ================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+.nfs*
+
+# ================================
+# Logs
+# ================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# ================================
+# Testing
+# ================================
+coverage/
+*.lcov
+.nyc_output/
+lib-cov/
+.grunt/
+.lock-wscript
+
+# Jest
+jest_*/
+.jest-cache/
+
+# Cypress
+cypress/videos/
+cypress/screenshots/
+cypress/downloads/
+
+# ================================
+# Temporary Files
+# ================================
+tmp/
+temp/
+*.tmp
+*.temp
+.cache/
+.parcel-cache/
+
+# ================================
+# Firebase
+# ================================
+.firebase/
+firebase-debug.log*
+ui-debug.log
+
+# ================================
+# Vercel
+# ================================
+.vercel
+
+# ================================
+# TypeScript
+# ================================
+*.tsbuildinfo
+
+# ================================
+# Optional npm cache directory
+# ================================
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Optional stylelint cache
+.stylelintcache
+
+# ================================
+# Microbundle cache
+# ================================
+.rpt2_cache/
+.rts2_cache_cjs/
+.rts2_cache_es/
+.rts2_cache_umd/
+
+# ================================
+# Optional REPL history
+# ================================
+.node_repl_history
+
+# ================================
+# Diagnostic reports
+# ================================
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# ================================
+# Runtime data
+# ================================
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# ================================
+# Directory for instrumented libs
+# ================================
+lib-cov
+
+# ================================
+# Dependency directories
+# ================================
+jspm_packages/
+bower_components/
+
+# ================================
+# Serverless directories
+# ================================
+.serverless/
+
+# ================================
+# FuseBox cache
+# ================================
+.fusebox/
+
+# ================================
+# DynamoDB Local files
+# ================================
+.dynamodb/
+
+# ================================
+# TernJS port file
+# ================================
+.tern-port
+
+# ================================
+# Stores VSCode versions used for testing
+# ================================
+.vscode-test
+
+# ================================
+# yarn v2
+# ================================
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ================================
+# MongoDB
+# ================================
+*.mongodb
+
+# ================================
+# Documentation
+# ================================
+# Ignore documentation builds but keep source
+docs/_build/
+
+# ================================
+# Backup files
+# ================================
+*.bak
+*.backup
+*.old
+
+# ================================
+# Archive files
+# ================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ================================
+# SSL Certificates
+# ================================
+*.pem
+*.key
+*.crt
+*.cert
+
+# ================================
+# Project Specific
+# ================================
+# Add your project-specific ignores here
+/backend/public/uploads/
+/frontend/src/environments/environment.local.ts
