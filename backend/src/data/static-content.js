@@ -50,7 +50,7 @@ const staticContent = {
       title: 'Modern UI Design',
       alt: 'User Interface Design',
       description: 'Responsive and accessible',
-      url: 'https://images.unsplash.com/photo-1586717791821-3f44a563eb4c?auto=format&fit=crop&w=800&q=80'
+      url: 'https://images.pexels.com/photos/3183162/pexels-photo-3183162.jpeg?auto=compress&cs=tinysrgb&w=800'
     }
   ],
 
@@ -58,7 +58,6 @@ const staticContent = {
     version: '1.0.0',
     author: 'Mohamed Abdelkader',
     client: 'Intent 3D',
-    deliveryDate: '2025-11-28',
     technologies: ['MongoDB', 'Express.js', 'Angular 20', 'Node.js', 'Bootstrap 5', 'Font Awesome']
   }
 };
