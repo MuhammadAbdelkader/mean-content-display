@@ -1,0 +1,37 @@
+<div class="app-container">
+  <!-- Loading State -->
+  <app-loading-spinner-component *ngIf="loading"></app-loading-spinner-component>
+
+  <!-- Error State -->
+  <div *ngIf="error && !loading" class="error-container">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-6 text-center">
+          <div class="error-content">
+            <i class="fas fa-exclamation-triangle error-icon"></i>
+            <h2 class="error-title">Oops! Something went wrong</h2>
+            <p class="error-message">{{ errorMessage }}</p>
+            <button class="btn btn-primary btn-lg" (click)="retryLoad()">
+              <i class="fas fa-redo"></i> Try Again
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Content State -->
+  <div *ngIf="content && !loading && !error">
+    <app-header-component
+      [title]="content.title"
+      [subtitle]="content.subtitle"
+      [description]="content.description">
+    </app-header-component>
+
+    <app-content-section-component [sections]="content.sections"></app-content-section-component>
+
+    <app-image-gallery-component [images]="content.images"></app-image-gallery-component>
+
+    <app-footer-component [metadata]="content.metadata"></app-footer-component>
+  </div>
+</div>

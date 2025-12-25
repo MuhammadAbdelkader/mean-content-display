@@ -1,0 +1,68 @@
+<footer class="footer">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h5 class="footer-title">
+          <i class="fas fa-layer-group"></i> MEAN Stack Project
+        </h5>
+        <p class="footer-text">
+          Professional static content display application built with the MEAN stack framework.
+        </p>
+        <div class="tech-stack">
+          <span class="tech-badge" *ngFor="let tech of metadata?.technologies">
+            {{ tech }}
+          </span>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <h5 class="footer-title">
+          <i class="fas fa-info-circle"></i> Project Info
+        </h5>
+        <ul class="footer-list">
+          <li><i class="fas fa-user"></i> Author: {{ metadata?.author }}</li>
+          <li><i class="fas fa-building"></i> Client: {{ metadata?.client }}</li>
+          <li><i class="fas fa-code-branch"></i> Version: {{ metadata?.version }}</li>
+          <li><i class="fas fa-calendar"></i> Delivery: {{ metadata?.deliveryDate }}</li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4">
+        <h5 class="footer-title">
+          <i class="fas fa-link"></i> Quick Links
+        </h5>
+        <ul class="footer-list">
+          <li>
+            <a href="https://mean-content-display.vercel.app" target="_blank">
+              <i class="fas fa-server"></i> Backend API
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/MuhammadAbdelkader" target="_blank">
+              <i class="fab fa-github"></i> GitHub Profile
+            </a>
+          </li>
+          <li>
+            <a href="https://angular.dev" target="_blank">
+              <i class="fab fa-angular"></i> Angular Docs
+            </a>
+          </li>
+          <li>
+            <a href="https://expressjs.com" target="_blank">
+              <i class="fab fa-node-js"></i> Express.js Docs
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="footer-divider">
+
+    <div class="footer-bottom">
+      <p class="mb-0">
+        <i class="fas fa-copyright"></i> {{ currentYear }} {{ metadata?.author }}.
+        Built with <i class="fas fa-heart text-danger"></i> for {{ metadata?.client }}
+      </p>
+    </div>
+  </div>
+</footer>

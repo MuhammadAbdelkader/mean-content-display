@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Static Content Display | Intent 3D</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Professional MEAN Stack application for displaying static content. Built with Angular 20, Express.js, and Node.js for Intent 3D.">
+  <meta name="keywords" content="MEAN Stack, Angular, Express.js, Node.js, MongoDB, Web Development, Static Content">
+  <meta name="author" content="Mohamed Abdelkader">
+
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="MEAN Stack - Static Content Display">
+  <meta property="og:description" content="Professional static content display application built with the MEAN stack framework">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://your-firebase-app.web.app">
+
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MEAN Stack - Static Content Display">
+  <meta name="twitter:description" content="Professional static content display application">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="https://mean-content-display.vercel.app/api/content" as="fetch" crossorigin="anonymous">
+
+  <style>
+    /* Loading Screen Styles */
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    }
+
+    #app-loading {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+      transition: opacity 0.5s ease-out;
+    }
+
+    #app-loading.loaded {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .loading-spinner {
+      width: 60px;
+      height: 60px;
+      border: 4px solid rgba(255, 255, 255, 0.3);
+      border-top-color: #fff;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+
+    .loading-text {
+      color: white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 20px;
+      letter-spacing: 1px;
+    }
+
+    .loading-logo {
+      font-size: 4rem;
+      color: white;
+      margin-bottom: 20px;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+
+    /* Hide app-root initially */
+    app-root {
+      display: block;
+      opacity: 0;
+      transition: opacity 0.5s ease-in;
+    }
+
+    app-root.loaded {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Loading Screen -->
+  <div id="app-loading">
+    <div class="loading-logo">
+      <i class="fas fa-layer-group"></i>
+    </div>
+    <div class="loading-spinner"></div>
+    <p class="loading-text">Loading MEAN Stack App...</p>
+  </div>
+
+  <!-- Angular App Root -->
+  <app-root></app-root>
+
+  <!-- Font Awesome CDN (Fallback) -->
+  <script>
+    // Remove loading screen after app loads
+    window.addEventListener('load', function() {
+      setTimeout(function() {
+        const loadingScreen = document.getElementById('app-loading');
+        const appRoot = document.querySelector('app-root');
+
+        if (loadingScreen) {
+          loadingScreen.classList.add('loaded');
+          setTimeout(() => loadingScreen.remove(), 500);
+        }
+
+        if (appRoot) {
+          appRoot.classList.add('loaded');
+        }
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
