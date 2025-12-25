@@ -235,13 +235,6 @@ Add these environment variables in your Vercel project settings:
 
 This project is part of a freelance contract for Intent 3D.
 
-## 📅 Project Information
-
-- **Client**: Intent 3D
-- **Delivery Date**: November 28, 2025
-- **Budget**: $5 USD
-- **Status**: ✅ Backend Complete & Deployed
-
 ## 🆘 Support
 
 If you encounter any issues:
